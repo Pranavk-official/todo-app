@@ -11,8 +11,10 @@ function TodoForm() {
 
     if (!todo) return;
 
-    addToDo({ todo, completed: false });
-    setTodo("");
+    if (todo.trim() !== "") {
+      addToDo({ todo, completed: false });
+      setTodo("");
+    }
   };
 
   return (
